@@ -1,10 +1,9 @@
 package io.github.unix_supremacist.block;
 
+import eu.pb4.polymer.core.api.block.SimplePolymerBlock;
 import io.github.unix_supremacist.interfaces.TransmuteEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
@@ -20,24 +19,24 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.List;
 
-public class TransmutionCircleBlock extends Block implements TransmuteEntity {
+public class TransmutionCircleBlock extends SimplePolymerBlock implements TransmuteEntity {
     public TransmutionCircleBlock(Properties properties) {
-        super(properties);
+        super(properties, Blocks.TRIPWIRE);
     }
 
-    @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (!level.isClientSide()) {
-            AABB aABB = new AABB(pos);
-            List<Villager> villagerList = level.getEntitiesOfClass(Villager.class, aABB);
-            if(!villagerList.isEmpty()){
-                level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
-                return transmuteEntity(villagerList.get(0), level);
-            }
-        }
+     @Override
+     public InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos pos, Player player, BlockHitResult blockHitResult) {
+         if (!level.isClientSide()) {
+             AABB aABB = new AABB(pos);
+             List<Villager> villagerList = level.getEntitiesOfClass(Villager.class, aABB);
+             if(!villagerList.isEmpty()){
+                 level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
+                 return transmuteEntity(villagerList.get(0), level);
+             }
+         }
 
-        return InteractionResult.PASS;
-    }
+         return InteractionResult.PASS;
+     }
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {

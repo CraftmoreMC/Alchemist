@@ -18,14 +18,8 @@ import net.minecraft.world.item.ItemStack;
 import org.lwjgl.glfw.GLFW;
 
 public class AlchemistClient implements ClientModInitializer {
-	static boolean run = true;
 	@Override
 	public void onInitializeClient() {
-		KeyMapping empower = KeyBindingHelper.registerKeyBinding(new KeyMapping("key.alchemist.empower", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_V, "key.categories.alchemist"));
 		BlockRenderLayerMap.INSTANCE.putBlock(AlchemistBlocks.transmutation_circle.getBlock(), RenderType.cutout());
-
-		ClientTickEvents.END_CLIENT_TICK.register(client -> {
-			if (empower.consumeClick()) ClientPlayNetworking.send(Alchemist.empower_packet, PacketByteBufs.empty());
-		});
 	}
 }

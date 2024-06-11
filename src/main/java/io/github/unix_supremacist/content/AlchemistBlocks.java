@@ -1,5 +1,6 @@
 package io.github.unix_supremacist.content;
 
+import eu.pb4.polymer.core.api.block.SimplePolymerBlock;
 import io.github.unix_supremacist.Alchemist;
 import io.github.unix_supremacist.block.TransmutionCircleBlock;
 import lombok.Getter;
@@ -11,9 +12,10 @@ import net.minecraft.world.level.block.Block;
 
 public enum AlchemistBlocks {
     transmutation_circle(new TransmutionCircleBlock(FabricBlockSettings.create()));
-    @Getter Block block;
+    @Getter
+    SimplePolymerBlock block;
 
-    AlchemistBlocks(Block block){
+    AlchemistBlocks(SimplePolymerBlock block){
         this.block = block;
         Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Alchemist.MODID, this.name()), block);
     }

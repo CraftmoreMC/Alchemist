@@ -3,16 +3,19 @@ package io.github.unix_supremacist.data;
 import io.github.unix_supremacist.Alchemist;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 
+import java.util.concurrent.CompletableFuture;
+
 import static io.github.unix_supremacist.content.AlchemistItems.*;
 
 public class Recipe extends FabricRecipeProvider {
-    public Recipe(FabricDataOutput generator) {
-        super(generator);
+    public Recipe(FabricDataOutput generator, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+        super(generator, registriesFuture);
     }
 
     @Override
