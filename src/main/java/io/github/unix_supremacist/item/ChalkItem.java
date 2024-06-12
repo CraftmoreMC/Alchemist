@@ -1,18 +1,14 @@
 package io.github.unix_supremacist.item;
 
 import eu.pb4.factorytools.api.item.FactoryBlockItem;
-import eu.pb4.polymer.core.api.block.SimplePolymerBlock;
-import eu.pb4.polymer.core.api.item.PolymerBlockItem;
 import io.github.unix_supremacist.block.TransmutionCircleBlock;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.block.Block;
 
 public class ChalkItem extends FactoryBlockItem {
     public ChalkItem(TransmutionCircleBlock block, Properties properties) {

@@ -81,34 +81,23 @@ dependencies {
 	mappings loom.officialMojangMappings()
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	include modImplementation("io.github.feltmc:felt-splash-api:1.0.0"){
-		exclude(group: "com.terraformersmc")
-	}
 	//include modImplementation("io.github.feltmc:felt-tool-api:1.0.0"){
 	//	exclude(group: "com.terraformersmc")
 	//}
-	//modRuntimeOnly "maven.modrinth:modmenu:${project.modmenu_version}"
-	modImplementation "io.github.ladysnake:PlayerAbilityLib:1.9.0"
+	modImplementation include("io.github.ladysnake:PlayerAbilityLib:${pal_version}")
 	//required for trinkets
-	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-base:6.0.0-beta.3"
-	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:6.0.0-beta.3"
-	modImplementation "eu.pb4.polyport:trinkets:3.9.0+polymerport.1"
-	modImplementation include("eu.pb4:polymer-core:0.8.3+1.20.6")
-	modImplementation include("eu.pb4:polymer-virtual-entity:0.8.3+1.20.6")
-	modImplementation include("eu.pb4:polymer-blocks:0.8.3+1.20.6")
-	modImplementation include("eu.pb4:polymer-resource-pack:0.8.3+1.20.6")
-	modImplementation include("eu.pb4:factorytools:0.2.2+1.20.6")
-	//modRuntimeOnly "maven.modrinth:jei:16.0.0.28"
-	//modRuntimeOnly "maven.modrinth:architectury-api:10.0.7+fabric"
-	//modRuntimeOnly "maven.modrinth:cloth-config:12.0.107+fabric"
-	//modRuntimeOnly "maven.modrinth:rei:13.0.654+fabric"
-	//modRuntimeOnly "maven.modrinth:modernfix:${project.modernfix_version}"
-	//modRuntimeOnly "maven.modrinth:ferrite-core:6.0.0-fabric"
-	compileOnly 'org.projectlombok:lombok:1.18.32'
-	annotationProcessor 'org.projectlombok:lombok:1.18.32'
-	
-	testCompileOnly 'org.projectlombok:lombok:1.18.32'
-	testAnnotationProcessor 'org.projectlombok:lombok:1.18.32'
+	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${ccomponents_version}"
+	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${ccomponents_version}"
+	modImplementation "eu.pb4.polyport:trinkets:${trinkets_version}"
+	//Polymer
+	modImplementation include("eu.pb4:polymer-core:${polymer_version}")
+	modImplementation include("eu.pb4:polymer-virtual-entity:${polymer_version}")
+	modImplementation include("eu.pb4:polymer-blocks:${polymer_version}")
+	modImplementation include("eu.pb4:polymer-resource-pack:${polymer_version}")
+	modImplementation include("eu.pb4:factorytools:${factory_version}")
+	//Lombok
+	compileOnly "org.projectlombok:lombok:${lombok_version}"
+	annotationProcessor "org.projectlombok:lombok:${lombok_version}"
 }
 
 processResources {
@@ -120,7 +109,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 17
+	it.options.release = 21
 }
 
 java {
@@ -129,8 +118,8 @@ java {
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
 
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 jar {

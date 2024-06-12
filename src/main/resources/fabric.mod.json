@@ -21,20 +21,16 @@
 		"main": [
 			"io.github.unix_supremacist.Entrypoint"
 		],
-		"client": [
-          "io.github.unix_supremacist.AlchemistClient"
-		],
 		"fabric-datagen": [
           "io.github.unix_supremacist.data.Datagen"
 		]
 	},
 	"depends": {
-		"fabricloader": ">=0.15.10",
-		"minecraft": "~1.20.5",
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.6",
 		"java": ">=21",
 		"fabric-api": "*",
 		"trinkets": "*",
 		"playerabilitylib": "*"
-	},
-	"accessWidener" : "alchemist.accesswidener"
+	}
 }

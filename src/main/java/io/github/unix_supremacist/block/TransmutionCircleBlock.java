@@ -4,7 +4,6 @@ import eu.pb4.polymer.blocks.api.BlockModelType;
 import eu.pb4.polymer.blocks.api.PolymerBlockModel;
 import eu.pb4.polymer.blocks.api.PolymerBlockResourceUtils;
 import eu.pb4.polymer.blocks.api.PolymerTexturedBlock;
-import eu.pb4.polymer.core.api.block.SimplePolymerBlock;
 import io.github.unix_supremacist.Alchemist;
 import io.github.unix_supremacist.interfaces.TransmuteEntity;
 import net.minecraft.core.BlockPos;
@@ -13,24 +12,20 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.List;
 
 public class TransmutionCircleBlock extends Block implements TransmuteEntity, PolymerTexturedBlock {
-    BlockState state;
+    BlockState blockState;
     public TransmutionCircleBlock(Properties properties) {
         super(properties);
-        state = PolymerBlockResourceUtils.requestBlock(BlockModelType.FULL_BLOCK, PolymerBlockModel.of(new ResourceLocation(Alchemist.MODID, "block/transmutation_circle")));
+        blockState = PolymerBlockResourceUtils.requestBlock(BlockModelType.PLANT_BLOCK, PolymerBlockModel.of(new ResourceLocation(Alchemist.MODID, "block/transmutation_circle")));
     }
 
      @Override
@@ -59,11 +54,11 @@ public class TransmutionCircleBlock extends Block implements TransmuteEntity, Po
 
     @Override
     public BlockState getPolymerBlockState(BlockState state){
-        return state;
+        return blockState;
     }
 
     @Override
     public BlockState getPolymerBlockState(BlockState state, ServerPlayer player){
-        return state;
+        return blockState;
     }
 }
