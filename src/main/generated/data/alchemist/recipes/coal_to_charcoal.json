@@ -19,6 +19,7 @@
     }
   ],
   "result": {
-    "item": "minecraft:coal"
+    "count": 1,
+    "id": "minecraft:coal"
   }
 }

@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:iron_ingot"
-            ]
+            "items": "minecraft:iron_ingot"
           }
         ]
       },
@@ -17,9 +15,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:lava_bucket"
-            ]
+            "items": "minecraft:lava_bucket"
           }
         ]
       },
@@ -43,6 +39,5 @@
     "recipes": [
       "alchemist:iron_band"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -18,7 +18,7 @@
     "FMF"
   ],
   "result": {
-    "item": "alchemist:destruction_catalyst"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "alchemist:destruction_catalyst"
+  }
 }

@@ -1,8 +1,15 @@
 package io.github.unix_supremacist.block;
 
+import eu.pb4.polymer.blocks.api.BlockModelType;
+import eu.pb4.polymer.blocks.api.PolymerBlockModel;
+import eu.pb4.polymer.blocks.api.PolymerBlockResourceUtils;
+import eu.pb4.polymer.blocks.api.PolymerTexturedBlock;
 import eu.pb4.polymer.core.api.block.SimplePolymerBlock;
+import io.github.unix_supremacist.Alchemist;
 import io.github.unix_supremacist.interfaces.TransmuteEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.player.Player;
@@ -19,9 +26,11 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.List;
 
-public class TransmutionCircleBlock extends SimplePolymerBlock implements TransmuteEntity {
+public class TransmutionCircleBlock extends Block implements TransmuteEntity, PolymerTexturedBlock {
+    BlockState state;
     public TransmutionCircleBlock(Properties properties) {
-        super(properties, Blocks.TRIPWIRE);
+        super(properties);
+        state = PolymerBlockResourceUtils.requestBlock(BlockModelType.FULL_BLOCK, PolymerBlockModel.of(new ResourceLocation(Alchemist.MODID, "block/transmutation_circle")));
     }
 
      @Override
@@ -38,7 +47,7 @@ public class TransmutionCircleBlock extends SimplePolymerBlock implements Transm
          return InteractionResult.PASS;
      }
 
-    @Override
+    /*@Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return Shapes.box(0f, 0f, 0f, 1f, 0.02f, 1f);
     }
@@ -46,5 +55,15 @@ public class TransmutionCircleBlock extends SimplePolymerBlock implements Transm
     @Override
     public VoxelShape getOcclusionShape(BlockState state, BlockGetter level, BlockPos pos) {
         return Shapes.empty();
+    }*/
+
+    @Override
+    public BlockState getPolymerBlockState(BlockState state){
+        return state;
+    }
+
+    @Override
+    public BlockState getPolymerBlockState(BlockState state, ServerPlayer player){
+        return state;
     }
 }

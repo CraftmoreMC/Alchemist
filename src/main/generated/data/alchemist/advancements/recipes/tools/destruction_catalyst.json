@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:flint_and_steel"
-            ]
+            "items": "minecraft:flint_and_steel"
           }
         ]
       },
@@ -17,9 +15,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "alchemist:mobius_fuel"
-            ]
+            "items": "alchemist:mobius_fuel"
           }
         ]
       },
@@ -29,9 +25,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "alchemist:philosophers_stone"
-            ]
+            "items": "alchemist:philosophers_stone"
           }
         ]
       },
@@ -56,6 +50,5 @@
     "recipes": [
       "alchemist:destruction_catalyst"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

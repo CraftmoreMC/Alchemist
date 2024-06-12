@@ -14,7 +14,7 @@
     "D "
   ],
   "result": {
-    "item": "alchemist:chalk"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "alchemist:chalk"
+  }
 }

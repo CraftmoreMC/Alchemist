@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "alchemist:dark_matter"
-            ]
+            "items": "alchemist:dark_matter"
           }
         ]
       },
@@ -17,9 +15,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "alchemist:destruction_catalyst"
-            ]
+            "items": "alchemist:destruction_catalyst"
           }
         ]
       },
@@ -43,6 +39,5 @@
     "recipes": [
       "alchemist:catalytic_lens"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

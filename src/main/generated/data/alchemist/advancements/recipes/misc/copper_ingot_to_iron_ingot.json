@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "alchemist:philosophers_stone"
-            ]
+            "items": "alchemist:philosophers_stone"
           }
         ]
       },
@@ -30,6 +28,5 @@
     "recipes": [
       "alchemist:copper_ingot_to_iron_ingot"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

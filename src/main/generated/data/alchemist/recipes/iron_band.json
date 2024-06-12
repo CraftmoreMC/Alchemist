@@ -15,7 +15,7 @@
     "III"
   ],
   "result": {
-    "item": "alchemist:iron_band"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "alchemist:iron_band"
+  }
 }
