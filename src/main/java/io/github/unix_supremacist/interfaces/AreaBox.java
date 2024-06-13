@@ -36,4 +36,38 @@ public interface AreaBox {
                 return null;
         }
     }
+
+    default ArrayList<BlockPos> getAreaFromFacing(Direction dir, Direction playerDir, BlockPos anchor, int width, int height, int depth){
+        switch(dir) {
+            case SOUTH:
+                return getArea(dir, anchor, new BlockPos(-width, -height, -depth), new BlockPos(width, height, 0));
+            case NORTH:
+                return getArea(dir, anchor, new BlockPos(-width, -height, 0), new BlockPos(width, height, depth));
+            case EAST:
+                return getArea(dir, anchor, new BlockPos(-depth, -height, -width), new BlockPos(0, height, width));
+            case WEST:
+                return getArea(dir, anchor, new BlockPos(0, -height, -width), new BlockPos(depth, height, width));
+            case UP:
+                switch (playerDir){
+                    case SOUTH:
+                    case NORTH:
+                        return getArea(dir, anchor, new BlockPos(-width, -depth, -height), new BlockPos(width, 0, height));
+                    case EAST:
+                    case WEST:
+                        return getArea(dir, anchor, new BlockPos(-height, -depth, -width), new BlockPos(height, 0, width));
+                }
+            case DOWN:
+                switch (playerDir){
+                    case SOUTH:
+                    case NORTH:
+                        return getArea(dir, anchor, new BlockPos(-width, 0, -height), new BlockPos(width, depth, height));
+                    case EAST:
+                    case WEST:
+                        return getArea(dir, anchor, new BlockPos(-height, 0, -width), new BlockPos(height, depth, width));
+                }
+            default:
+                Alchemist.LOGGER.error("HOW DID YOU CLICK A DIRECTION THAT ISN'T NORTH SOUTH EAST WEST TOP OR BOTTOM");
+                return null;
+        }
+    }
 }

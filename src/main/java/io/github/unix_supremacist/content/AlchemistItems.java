@@ -2,10 +2,7 @@ package io.github.unix_supremacist.content;
 
 import eu.pb4.factorytools.api.item.ModeledItem;
 import io.github.unix_supremacist.Alchemist;
-import io.github.unix_supremacist.item.AlchemistBlockItem;
-import io.github.unix_supremacist.item.DestructionItem;
-import io.github.unix_supremacist.item.GaleItem;
-import io.github.unix_supremacist.item.PhilosophersStoneItem;
+import io.github.unix_supremacist.item.*;
 import lombok.Getter;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -23,6 +20,7 @@ public enum AlchemistItems {
     aeternalis_fuel(1638400, Items.NETHERITE_SCRAP),
     //archangels_smite,
     //black_hole_band,
+    builders_stone(new BuildersStone(new Properties().stacksTo(1).durability(16),4,4)),
     catalytic_lens(new DestructionItem(new Properties().stacksTo(1).durability(30), 3, 10, 5, Items.GOLD_NUGGET)),
     chalk(new AlchemistBlockItem(AlchemistBlocks.transmutation_circle.getBlock(), new Properties().durability(64), Items.STICK)),
     coal_coke(3200, Items.COOKED_BEEF),

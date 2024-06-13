@@ -1,6 +1,7 @@
 package io.github.unix_supremacist.item;
 
-import dev.emi.trinkets.api.*;
+import dev.emi.trinkets.api.SlotReference;
+import dev.emi.trinkets.api.TrinketItem;
 import eu.pb4.factorytools.api.item.AutoModeledPolymerItem;
 import io.github.ladysnake.pal.AbilitySource;
 import io.github.ladysnake.pal.Pal;

@@ -1,15 +1,8 @@
 package io.github.unix_supremacist.item;
 
 import eu.pb4.factorytools.api.item.AutoModeledPolymerItem;
-import eu.pb4.factorytools.api.item.FactoryBlockItem;
-import io.github.unix_supremacist.block.TransmutionCircleBlock;
-import io.github.unix_supremacist.content.AlchemistItems;
 import lombok.Getter;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.network.protocol.game.ClientboundSoundPacket;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.BlockItem;
@@ -19,8 +12,6 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.phys.Vec3;
 
 public class AlchemistBlockItem extends BlockItem implements AutoModeledPolymerItem {
     @Getter Item polymerItem;
