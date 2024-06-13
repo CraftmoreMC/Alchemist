@@ -1,6 +1,7 @@
 package io.github.unix_supremacist;
 
 import eu.pb4.polymer.core.api.item.PolymerItemGroupUtils;
+import eu.pb4.polymer.core.api.item.PolymerItemUtils;
 import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import io.github.unix_supremacist.content.AlchemistBlocks;
 import io.github.unix_supremacist.content.AlchemistItems;
@@ -38,5 +39,6 @@ public class Alchemist implements ModInitializer {
 		AlchemistItems.values(); //force the enum to load
 		CommonLifecycleEvents.TAGS_LOADED.register((registries, client) -> BlockTag.init());
 		PolymerResourcePackUtils.addModAssets(MODID);
+		PolymerItemUtils.markAsPolymer(POWER);
 	}
 }
