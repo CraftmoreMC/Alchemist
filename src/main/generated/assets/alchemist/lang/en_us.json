@@ -1,15 +1,18 @@
 {
   "block.alchemist.transmutation_circle": "Transmutation Circle",
+  "item.alchemist.aeternalis_fuel": "Aeternalis Fuel",
   "item.alchemist.alchemical_coal": "Alchemical Coal",
   "item.alchemist.catalytic_lens": "Catalytic Lens",
   "item.alchemist.chalk": "Chalk",
+  "item.alchemist.coal_coke": "Coal Coke",
   "item.alchemist.dark_matter": "Dark Matter",
   "item.alchemist.destruction_catalyst": "Destruction Catalyst",
+  "item.alchemist.evertide_gem": "Evertide Gem",
   "item.alchemist.iron_band": "Iron Band",
   "item.alchemist.mobius_fuel": "Mobius Fuel",
   "item.alchemist.philosophers_stone": "Philosophers Stone",
+  "item.alchemist.red_matter": "Red Matter",
   "item.alchemist.swiftwolfs_rending_gale": "Swiftwolfs Rending Gale",
-  "itemGroup.alchemist": "Alchemist",
-  "key.alchemist.empower": "Empower",
-  "key.categories.alchemist": "Alchemist"
+  "item.alchemist.volcanite_gem": "Volcanite Gem",
+  "itemGroup.alchemist": "Alchemist"
 }

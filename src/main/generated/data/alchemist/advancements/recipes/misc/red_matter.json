@@ -1,21 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_destruction_catalyst": {
+    "has_aeternalis_fuel": {
       "conditions": {
         "items": [
           {
-            "items": "alchemist:destruction_catalyst"
+            "items": "alchemist:aeternalis_fuel"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_red_matter": {
+    "has_dark_matter": {
       "conditions": {
         "items": [
           {
-            "items": "alchemist:red_matter"
+            "items": "alchemist:dark_matter"
           }
         ]
       },
@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:catalytic_lens"
+        "recipe": "alchemist:red_matter"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -31,13 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_red_matter",
-      "has_destruction_catalyst"
+      "has_dark_matter",
+      "has_aeternalis_fuel"
     ]
   ],
   "rewards": {
     "recipes": [
-      "alchemist:catalytic_lens"
+      "alchemist:red_matter"
     ]
   }
 }

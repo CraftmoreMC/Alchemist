@@ -6,11 +6,11 @@
       "item": "alchemist:philosophers_stone"
     },
     {
-      "item": "alchemist:mobius_fuel"
+      "item": "alchemist:aeternalis_fuel"
     }
   ],
   "result": {
     "count": 8,
-    "id": "alchemist:alchemical_coal"
+    "id": "alchemist:mobius_fuel"
   }
 }

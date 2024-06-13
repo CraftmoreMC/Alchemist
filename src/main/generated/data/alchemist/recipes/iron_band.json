@@ -6,7 +6,7 @@
       "item": "minecraft:iron_ingot"
     },
     "L": {
-      "item": "minecraft:lava_bucket"
+      "tag": "c:buckets/lava"
     }
   },
   "pattern": [

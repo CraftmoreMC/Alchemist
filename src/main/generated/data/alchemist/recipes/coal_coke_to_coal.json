@@ -10,16 +10,10 @@
     },
     {
       "item": "minecraft:coal"
-    },
-    {
-      "item": "minecraft:coal"
-    },
-    {
-      "item": "minecraft:coal"
     }
   ],
   "result": {
-    "count": 1,
-    "id": "alchemist:alchemical_coal"
+    "count": 2,
+    "id": "alchemist:coal_coke"
   }
 }

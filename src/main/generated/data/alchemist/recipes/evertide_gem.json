@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "C": {
-      "item": "alchemist:destruction_catalyst"
-    },
     "D": {
-      "item": "alchemist:red_matter"
+      "item": "alchemist:dark_matter"
+    },
+    "W": {
+      "tag": "c:buckets/water"
     }
   },
   "pattern": [
+    "WWW",
     "DDD",
-    "CDC",
-    "DDD"
+    "WWW"
   ],
   "result": {
     "count": 1,
-    "id": "alchemist:catalytic_lens"
+    "id": "alchemist:evertide_gem"
   }
 }

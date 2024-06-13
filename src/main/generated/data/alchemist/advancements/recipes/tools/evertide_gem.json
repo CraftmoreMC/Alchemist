@@ -1,21 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_destruction_catalyst": {
+    "has_dark_matter": {
       "conditions": {
         "items": [
           {
-            "items": "alchemist:destruction_catalyst"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_red_matter": {
-      "conditions": {
-        "items": [
-          {
-            "items": "alchemist:red_matter"
+            "items": "alchemist:dark_matter"
           }
         ]
       },
@@ -23,21 +13,31 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:catalytic_lens"
+        "recipe": "alchemist:evertide_gem"
       },
       "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_water_bucket": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:water_bucket"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
       "has_the_recipe",
-      "has_red_matter",
-      "has_destruction_catalyst"
+      "has_dark_matter",
+      "has_water_bucket"
     ]
   ],
   "rewards": {
     "recipes": [
-      "alchemist:catalytic_lens"
+      "alchemist:evertide_gem"
     ]
   }
 }

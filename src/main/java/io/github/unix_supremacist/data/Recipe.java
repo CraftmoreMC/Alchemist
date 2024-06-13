@@ -33,7 +33,7 @@ public class Recipe extends FabricRecipeProvider {
                 .pattern("ILI")
                 .pattern("III")
                 .define('I', Items.IRON_INGOT)
-                .define('L', Items.LAVA_BUCKET)
+                .define('L', ItemTag.lava_bucket)
                 .unlockedBy(RecipeProvider.getHasName(Items.IRON_INGOT), RecipeProvider.has(Items.IRON_INGOT))
                 .unlockedBy(RecipeProvider.getHasName(Items.LAVA_BUCKET), RecipeProvider.has(Items.LAVA_BUCKET))
                 .save(recipeoutput);
@@ -41,21 +41,41 @@ public class Recipe extends FabricRecipeProvider {
                 .pattern("DDD")
                 .pattern("CDC")
                 .pattern("DDD")
-                .define('D', dark_matter.getItem())
+                .define('D', red_matter.getItem())
                 .define('C', destruction_catalyst.getItem())
-                .unlockedBy(RecipeProvider.getHasName(dark_matter.getItem()), RecipeProvider.has(dark_matter.getItem()))
+                .unlockedBy(RecipeProvider.getHasName(red_matter.getItem()), RecipeProvider.has(red_matter.getItem()))
                 .unlockedBy(RecipeProvider.getHasName(destruction_catalyst.getItem()), RecipeProvider.has(destruction_catalyst.getItem()))
                 .save(recipeoutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, destruction_catalyst.getItem())
-                .pattern("FMF")
-                .pattern("MSM")
-                .pattern("FMF")
+                .pattern("FRF")
+                .pattern("ASA")
+                .pattern("FRF")
                 .define('F', Items.FLINT_AND_STEEL)
-                .define('M', mobius_fuel.getItem())
+                .define('A', aeternalis_fuel.getItem())
                 .define('S', philosophers_stone.getItem())
+                .define('R', red_matter.getItem())
                 .unlockedBy(RecipeProvider.getHasName(Items.FLINT_AND_STEEL), RecipeProvider.has(Items.FLINT_AND_STEEL))
-                .unlockedBy(RecipeProvider.getHasName(mobius_fuel.getItem()), RecipeProvider.has(mobius_fuel.getItem()))
+                .unlockedBy(RecipeProvider.getHasName(aeternalis_fuel.getItem()), RecipeProvider.has(aeternalis_fuel.getItem()))
                 .unlockedBy(RecipeProvider.getHasName(philosophers_stone.getItem()), RecipeProvider.has(philosophers_stone.getItem()))
+                .unlockedBy(RecipeProvider.getHasName(red_matter.getItem()), RecipeProvider.has(red_matter.getItem()))
+                .save(recipeoutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, volcanite_gem.getItem())
+                .pattern("LLL")
+                .pattern("DDD")
+                .pattern("LLL")
+                .define('D', dark_matter.getItem())
+                .define('L', ItemTag.lava_bucket)
+                .unlockedBy(RecipeProvider.getHasName(dark_matter.getItem()), RecipeProvider.has(dark_matter.getItem()))
+                .unlockedBy(RecipeProvider.getHasName(Items.LAVA_BUCKET), RecipeProvider.has(Items.LAVA_BUCKET))
+                .save(recipeoutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, evertide_gem.getItem())
+                .pattern("WWW")
+                .pattern("DDD")
+                .pattern("WWW")
+                .define('D', dark_matter.getItem())
+                .define('W', ItemTag.water_bucket)
+                .unlockedBy(RecipeProvider.getHasName(dark_matter.getItem()), RecipeProvider.has(dark_matter.getItem()))
+                .unlockedBy(RecipeProvider.getHasName(Items.WATER_BUCKET), RecipeProvider.has(Items.WATER_BUCKET))
                 .save(recipeoutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, chalk.getItem())
                 .pattern("CD")
@@ -65,9 +85,57 @@ public class Recipe extends FabricRecipeProvider {
                 .unlockedBy(RecipeProvider.getHasName(Items.DIORITE), RecipeProvider.has(Items.DIORITE))
                 .unlockedBy(RecipeProvider.getHasName(Items.CLAY_BALL), RecipeProvider.has(Items.CLAY_BALL))
                 .save(recipeoutput);
-        twoWayPhilStoneRecipe(Items.COAL, Items.CHARCOAL, 4, recipeoutput);
-        twoWayPhilStoneRecipe(alchemical_coal.getItem(), Items.COAL, 4, recipeoutput);
-        twoWayPhilStoneRecipe(mobius_fuel.getItem(), alchemical_coal.getItem(), 4, recipeoutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.COBBLESTONE)
+                .pattern("WPL")
+                .define('W', ItemTag.water_bucket)
+                .define('P', philosophers_stone.getItem())
+                .define('L', ItemTag.lava_bucket)
+                .unlockedBy(RecipeProvider.getHasName(Items.LAVA_BUCKET), RecipeProvider.has(Items.LAVA_BUCKET))
+                .unlockedBy(RecipeProvider.getHasName(Items.WATER_BUCKET), RecipeProvider.has(Items.WATER_BUCKET))
+                .unlockedBy(RecipeProvider.getHasName(philosophers_stone.getItem()), RecipeProvider.has(philosophers_stone.getItem()))
+                .save(recipeoutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.OBSIDIAN)
+                .pattern("PWL")
+                .define('W', ItemTag.water_bucket)
+                .define('P', philosophers_stone.getItem())
+                .define('L', ItemTag.lava_bucket)
+                .unlockedBy(RecipeProvider.getHasName(Items.LAVA_BUCKET), RecipeProvider.has(Items.LAVA_BUCKET))
+                .unlockedBy(RecipeProvider.getHasName(Items.WATER_BUCKET), RecipeProvider.has(Items.WATER_BUCKET))
+                .unlockedBy(RecipeProvider.getHasName(philosophers_stone.getItem()), RecipeProvider.has(philosophers_stone.getItem()))
+                .save(recipeoutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.STONE)
+                .pattern("PLW")
+                .define('W', ItemTag.water_bucket)
+                .define('P', philosophers_stone.getItem())
+                .define('L', ItemTag.lava_bucket)
+                .unlockedBy(RecipeProvider.getHasName(Items.LAVA_BUCKET), RecipeProvider.has(Items.LAVA_BUCKET))
+                .unlockedBy(RecipeProvider.getHasName(Items.WATER_BUCKET), RecipeProvider.has(Items.WATER_BUCKET))
+                .unlockedBy(RecipeProvider.getHasName(philosophers_stone.getItem()), RecipeProvider.has(philosophers_stone.getItem()))
+                .save(recipeoutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, dark_matter.getItem())
+                .pattern("MMM")
+                .pattern("MNM")
+                .pattern("MMM")
+                .define('M', mobius_fuel.getItem())
+                .define('N', Items.NETHERITE_BLOCK)
+                .unlockedBy(RecipeProvider.getHasName(mobius_fuel.getItem()), RecipeProvider.has(mobius_fuel.getItem()))
+                .unlockedBy(RecipeProvider.getHasName(Items.NETHERITE_BLOCK), RecipeProvider.has(Items.NETHERITE_BLOCK))
+                .save(recipeoutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, red_matter.getItem())
+                .pattern("AAA")
+                .pattern("DDD")
+                .pattern("AAA")
+                .define('D', dark_matter.getItem())
+                .define('A', aeternalis_fuel.getItem())
+                .unlockedBy(RecipeProvider.getHasName(dark_matter.getItem()), RecipeProvider.has(dark_matter.getItem()))
+                .unlockedBy(RecipeProvider.getHasName(aeternalis_fuel.getItem()), RecipeProvider.has(aeternalis_fuel.getItem()))
+                .save(recipeoutput);
+        twoWayPhilStoneRecipe(Items.COAL, Items.CHARCOAL, 1, recipeoutput);
+        philStoneRecipe(coal_coke.getItem(), 2, Items.COAL, 2, recipeoutput);
+        twoWayPhilStoneRecipe(alchemical_coal.getItem(), coal_coke.getItem(), 8, recipeoutput);
+        twoWayPhilStoneRecipe(mobius_fuel.getItem(), alchemical_coal.getItem(), 8, recipeoutput);
+        twoWayPhilStoneRecipe(aeternalis_fuel.getItem(), mobius_fuel.getItem(), 8, recipeoutput);
+
         twoWayPhilStoneRecipe(Items.IRON_INGOT, Items.COPPER_INGOT, 8, recipeoutput);
         twoWayPhilStoneRecipe(Items.DIAMOND, Items.GOLD_INGOT, 4, recipeoutput);
         twoWayPhilStoneRecipe(Items.NETHERITE_SCRAP, Items.DIAMOND, 4, recipeoutput);

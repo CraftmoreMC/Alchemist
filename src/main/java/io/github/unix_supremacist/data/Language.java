@@ -13,7 +13,6 @@ import org.apache.commons.lang3.text.WordUtils;
 
 import java.util.concurrent.CompletableFuture;
 
-
 public class Language extends FabricLanguageProvider {
     protected Language(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
@@ -28,8 +27,5 @@ public class Language extends FabricLanguageProvider {
             translationBuilder.add(block.getBlock(), WordUtils.capitalize(block.name().replace("_", " ")));
 
         translationBuilder.add(ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), new ResourceLocation(Alchemist.MODID, "tab")), WordUtils.capitalize(Alchemist.MODID.replace("_", " ")));
-
-        translationBuilder.add("key.categories.alchemist", WordUtils.capitalize(Alchemist.MODID.replace("_", " ")));
-        translationBuilder.add("key.alchemist.empower", "Empower");
     }
 }

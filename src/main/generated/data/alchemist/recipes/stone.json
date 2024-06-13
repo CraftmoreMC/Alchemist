@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "tag": "c:buckets/lava"
+    },
+    "P": {
+      "item": "alchemist:philosophers_stone"
+    },
+    "W": {
+      "tag": "c:buckets/water"
+    }
+  },
+  "pattern": [
+    "PLW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:stone"
+  }
+}

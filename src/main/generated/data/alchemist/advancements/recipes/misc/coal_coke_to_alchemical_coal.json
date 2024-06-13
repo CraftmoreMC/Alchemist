@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:coal_to_alchemical_coal"
+        "recipe": "alchemist:coal_coke_to_alchemical_coal"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "alchemist:coal_to_alchemical_coal"
+      "alchemist:coal_coke_to_alchemical_coal"
     ]
   }
 }

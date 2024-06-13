@@ -19,7 +19,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"io.github.unix_supremacist.Entrypoint"
+          "io.github.unix_supremacist.Alchemist"
 		],
 		"fabric-datagen": [
           "io.github.unix_supremacist.data.Datagen"

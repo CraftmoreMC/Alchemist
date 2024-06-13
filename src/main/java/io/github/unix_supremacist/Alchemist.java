@@ -5,6 +5,7 @@ import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import io.github.unix_supremacist.content.AlchemistBlocks;
 import io.github.unix_supremacist.content.AlchemistItems;
 import io.github.unix_supremacist.data.BlockTag;
+import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponentType;
@@ -18,23 +19,24 @@ import net.minecraft.world.item.ItemStack;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Alchemist {
-    public static final String MODID = "alchemist";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
-    public static final ResourceLocation empower_packet = new ResourceLocation(Alchemist.MODID, "empower_packet");
-    public static final CreativeModeTab tab = PolymerItemGroupUtils.builder()
-            .icon(() -> new ItemStack(AlchemistItems.philosophers_stone.getItem()))
-            .title(Component.translatable("itemGroup."+MODID))
-            .build();
-    public static final DataComponentType<Integer> POWER = DataComponentType.<Integer>builder().persistent(ExtraCodecs.NON_NEGATIVE_INT).networkSynchronized(ByteBufCodecs.VAR_INT).build();
+public class Alchemist implements ModInitializer {
+	public static final String MODID = "alchemist";
+	public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
+	public static final CreativeModeTab tab = PolymerItemGroupUtils.builder()
+			.icon(() -> new ItemStack(AlchemistItems.philosophers_stone.getItem()))
+			.title(Component.translatable("itemGroup."+MODID))
+			.build();
+	public static final DataComponentType<Integer> POWER = DataComponentType.<Integer>builder().persistent(ExtraCodecs.NON_NEGATIVE_INT).networkSynchronized(ByteBufCodecs.VAR_INT).build();
 
-    public static void Init(){
-        LOGGER.info("Welcome to the World of Alchemy!");
-        Registry.register(BuiltInRegistries.DATA_COMPONENT_TYPE, new ResourceLocation(MODID, "empowered"), POWER);
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(MODID, "tab"), tab);
-        AlchemistBlocks.values(); //force the enum to load
-        AlchemistItems.values(); //force the enum to load
-        CommonLifecycleEvents.TAGS_LOADED.register((registries, client) -> BlockTag.init());
-        PolymerResourcePackUtils.addModAssets(MODID);
-    }
+
+	@Override
+	public void onInitialize() {
+		LOGGER.info("Welcome to the World of Alchemy!");
+		Registry.register(BuiltInRegistries.DATA_COMPONENT_TYPE, new ResourceLocation(MODID, "empowered"), Alchemist.POWER);
+		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(MODID, "tab"), Alchemist.tab);
+		AlchemistBlocks.values(); //force the enum to load
+		AlchemistItems.values(); //force the enum to load
+		CommonLifecycleEvents.TAGS_LOADED.register((registries, client) -> BlockTag.init());
+		PolymerResourcePackUtils.addModAssets(MODID);
+	}
 }

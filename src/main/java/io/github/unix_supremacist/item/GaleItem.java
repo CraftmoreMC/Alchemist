@@ -1,15 +1,11 @@
 package io.github.unix_supremacist.item;
 
-import dev.emi.trinkets.TrinketSlot;
 import dev.emi.trinkets.api.*;
 import eu.pb4.factorytools.api.item.AutoModeledPolymerItem;
-import eu.pb4.factorytools.api.item.ModeledItem;
 import io.github.ladysnake.pal.AbilitySource;
 import io.github.ladysnake.pal.Pal;
 import io.github.ladysnake.pal.VanillaAbilities;
 import io.github.unix_supremacist.Alchemist;
-import net.minecraft.core.Holder;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,7 +14,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.gameevent.GameEvent;
 
 public class GaleItem extends TrinketItem implements AutoModeledPolymerItem {
     public GaleItem(Properties properties) {

@@ -11,12 +11,14 @@ import net.minecraft.world.item.Item;
 
 import java.util.concurrent.CompletableFuture;
 
-import static io.github.unix_supremacist.content.AlchemistItems.swiftwolfs_rending_gale;
+import static io.github.unix_supremacist.content.AlchemistItems.*;
 
 public class ItemTag extends FabricTagProvider.ItemTagProvider {
+    public static String common = "c";
     public static TagKey<Item> handring = TagKey.create(BuiltInRegistries.ITEM.key(), new ResourceLocation(TrinketsMain.MOD_ID, "hand/ring"));
     public static TagKey<Item> offhandring = TagKey.create(BuiltInRegistries.ITEM.key(), new ResourceLocation(TrinketsMain.MOD_ID, "offhand/ring"));
-
+    public static TagKey<Item> water_bucket = TagKey.create(BuiltInRegistries.ITEM.key(), new ResourceLocation(common, "buckets/water"));
+    public static TagKey<Item> lava_bucket = TagKey.create(BuiltInRegistries.ITEM.key(), new ResourceLocation(common, "buckets/lava"));
     public ItemTag(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output, completableFuture);
     }
@@ -25,5 +27,7 @@ public class ItemTag extends FabricTagProvider.ItemTagProvider {
     protected void addTags(HolderLookup.Provider arg) {
         getOrCreateTagBuilder(handring).add(swiftwolfs_rending_gale.getItem());
         getOrCreateTagBuilder(offhandring).add(swiftwolfs_rending_gale.getItem());
+        getOrCreateTagBuilder(water_bucket).add(evertide_gem.getItem());
+        getOrCreateTagBuilder(lava_bucket).add(volcanite_gem.getItem());
     }
 }

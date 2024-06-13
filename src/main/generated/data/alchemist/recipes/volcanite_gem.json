@@ -2,20 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "C": {
-      "item": "alchemist:destruction_catalyst"
-    },
     "D": {
-      "item": "alchemist:red_matter"
+      "item": "alchemist:dark_matter"
+    },
+    "L": {
+      "tag": "c:buckets/lava"
     }
   },
   "pattern": [
+    "LLL",
     "DDD",
-    "CDC",
-    "DDD"
+    "LLL"
   ],
   "result": {
     "count": 1,
-    "id": "alchemist:catalytic_lens"
+    "id": "alchemist:volcanite_gem"
   }
 }

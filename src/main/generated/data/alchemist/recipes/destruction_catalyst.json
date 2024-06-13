@@ -2,20 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
+    "A": {
+      "item": "alchemist:aeternalis_fuel"
+    },
     "F": {
       "item": "minecraft:flint_and_steel"
     },
-    "M": {
-      "item": "alchemist:mobius_fuel"
+    "R": {
+      "item": "alchemist:red_matter"
     },
     "S": {
       "item": "alchemist:philosophers_stone"
     }
   },
   "pattern": [
-    "FMF",
-    "MSM",
-    "FMF"
+    "FRF",
+    "ASA",
+    "FRF"
   ],
   "result": {
     "count": 1,
