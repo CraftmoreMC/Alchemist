@@ -33,8 +33,8 @@ public class Alchemist implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Welcome to the World of Alchemy!");
-		Registry.register(BuiltInRegistries.DATA_COMPONENT_TYPE, new ResourceLocation(MODID, "empowered"), Alchemist.POWER);
-		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(MODID, "tab"), Alchemist.tab);
+		Registry.register(BuiltInRegistries.DATA_COMPONENT_TYPE, ResourceLocation.fromNamespaceAndPath(MODID, "empowered"), Alchemist.POWER);
+		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MODID, "tab"), Alchemist.tab);
 		AlchemistBlocks.values(); //force the enum to load
 		AlchemistItems.values(); //force the enum to load
 		CommonLifecycleEvents.TAGS_LOADED.register((registries, client) -> BlockTag.init());

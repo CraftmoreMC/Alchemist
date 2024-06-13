@@ -63,7 +63,7 @@ public enum AlchemistItems {
     AlchemistItems(Item item, int burntime){
         this.item = item;
         FuelRegistry.INSTANCE.add(item, burntime);
-        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Alchemist.MODID, this.name()), item);
-        ItemGroupEvents.modifyEntriesEvent(ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), new ResourceLocation(Alchemist.MODID, "tab"))).register(content -> content.accept(item));
+        Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(Alchemist.MODID, this.name()), item);
+        ItemGroupEvents.modifyEntriesEvent(ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), ResourceLocation.fromNamespaceAndPath(Alchemist.MODID, "tab"))).register(content -> content.accept(item));
     }
 }

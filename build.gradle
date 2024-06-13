@@ -88,7 +88,7 @@ dependencies {
 	//required for trinkets
 	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${ccomponents_version}"
 	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${ccomponents_version}"
-	modImplementation "eu.pb4.polyport:trinkets:${trinkets_version}"
+	//modImplementation "eu.pb4.polyport:trinkets:${trinkets_version}"
 	//Polymer
 	modImplementation include("eu.pb4:polymer-core:${polymer_version}")
 	modImplementation include("eu.pb4:polymer-virtual-entity:${polymer_version}")

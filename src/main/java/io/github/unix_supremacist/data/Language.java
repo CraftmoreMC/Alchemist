@@ -26,6 +26,6 @@ public class Language extends FabricLanguageProvider {
         for (AlchemistBlocks block : AlchemistBlocks.values())
             translationBuilder.add(block.getBlock(), WordUtils.capitalize(block.name().replace("_", " ")));
 
-        translationBuilder.add(ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), new ResourceLocation(Alchemist.MODID, "tab")), WordUtils.capitalize(Alchemist.MODID.replace("_", " ")));
+        translationBuilder.add(ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), ResourceLocation.fromNamespaceAndPath(Alchemist.MODID, "tab")), WordUtils.capitalize(Alchemist.MODID.replace("_", " ")));
     }
 }

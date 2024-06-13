@@ -1,6 +1,6 @@
 package io.github.unix_supremacist.data;
 
-import dev.emi.trinkets.TrinketsMain;
+//import dev.emi.trinkets.TrinketsMain;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
@@ -15,10 +15,11 @@ import static io.github.unix_supremacist.content.AlchemistItems.*;
 
 public class ItemTag extends FabricTagProvider.ItemTagProvider {
     public static String common = "c";
-    public static TagKey<Item> handring = TagKey.create(BuiltInRegistries.ITEM.key(), new ResourceLocation(TrinketsMain.MOD_ID, "hand/ring"));
-    public static TagKey<Item> offhandring = TagKey.create(BuiltInRegistries.ITEM.key(), new ResourceLocation(TrinketsMain.MOD_ID, "offhand/ring"));
-    public static TagKey<Item> water_bucket = TagKey.create(BuiltInRegistries.ITEM.key(), new ResourceLocation(common, "buckets/water"));
-    public static TagKey<Item> lava_bucket = TagKey.create(BuiltInRegistries.ITEM.key(), new ResourceLocation(common, "buckets/lava"));
+    public static String trinkets = "trinkets";
+    public static TagKey<Item> handring = TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath(trinkets, "hand/ring"));
+    public static TagKey<Item> offhandring = TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath(trinkets, "offhand/ring"));
+    public static TagKey<Item> water_bucket = TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath(common, "buckets/water"));
+    public static TagKey<Item> lava_bucket = TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath(common, "buckets/lava"));
     public ItemTag(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output, completableFuture);
     }

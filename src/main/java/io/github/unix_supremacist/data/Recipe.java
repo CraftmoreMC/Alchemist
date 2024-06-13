@@ -169,6 +169,6 @@ public class Recipe extends FabricRecipeProvider {
                 .requires(philosophers_stone.getItem())
                 .requires(input, inputcount)
                 .unlockedBy(RecipeProvider.getHasName(philosophers_stone.getItem()), RecipeProvider.has(philosophers_stone.getItem()))
-                .save(recipeoutput, new ResourceLocation(Alchemist.MODID, output +"_to_"+input));
+                .save(recipeoutput, ResourceLocation.fromNamespaceAndPath(Alchemist.MODID, output +"_to_"+input));
     }
 }

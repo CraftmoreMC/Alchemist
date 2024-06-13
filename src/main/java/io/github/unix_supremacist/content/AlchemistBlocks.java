@@ -15,6 +15,6 @@ public enum AlchemistBlocks {
 
     AlchemistBlocks(TransmutionCircleBlock block){
         this.block = block;
-        Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Alchemist.MODID, this.name()), block);
+        Registry.register(BuiltInRegistries.BLOCK, ResourceLocation.fromNamespaceAndPath(Alchemist.MODID, this.name()), block);
     }
 }

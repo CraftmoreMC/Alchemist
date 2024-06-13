@@ -1,6 +1,6 @@
 package io.github.unix_supremacist.item;
 
-import dev.emi.trinkets.api.*;
+//import dev.emi.trinkets.api.*;
 import eu.pb4.factorytools.api.item.AutoModeledPolymerItem;
 import io.github.ladysnake.pal.AbilitySource;
 import io.github.ladysnake.pal.Pal;
@@ -15,13 +15,13 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 
-public class GaleItem extends TrinketItem implements AutoModeledPolymerItem {
+public class GaleItem extends Item implements AutoModeledPolymerItem {
     public GaleItem(Properties properties) {
         super(properties);
     }
     public static final AbilitySource gale_ability = Pal.getAbilitySource(Alchemist.MODID, "swiftwolfs_rending_gale");
 
-    @Override
+    /*@Override
     public void onEquip(ItemStack stack, SlotReference slot, LivingEntity entity) {
         if (!entity.level().isClientSide())
             if (entity instanceof Player)
@@ -42,7 +42,7 @@ public class GaleItem extends TrinketItem implements AutoModeledPolymerItem {
             return InteractionResultHolder.sidedSuccess(stack, world.isClientSide());
         }
         return super.use(world, user, hand);
-    }
+    }*/
 
     @Override
     public Item getPolymerItem() {

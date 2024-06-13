@@ -25,7 +25,7 @@ public class TransmutionCircleBlock extends Block implements TransmuteEntity, Po
     BlockState blockState;
     public TransmutionCircleBlock(Properties properties) {
         super(properties);
-        blockState = PolymerBlockResourceUtils.requestBlock(BlockModelType.PLANT_BLOCK, PolymerBlockModel.of(new ResourceLocation(Alchemist.MODID, "block/transmutation_circle")));
+        blockState = PolymerBlockResourceUtils.requestBlock(BlockModelType.PLANT_BLOCK, PolymerBlockModel.of(ResourceLocation.fromNamespaceAndPath(Alchemist.MODID, "block/transmutation_circle")));
     }
 
      @Override
