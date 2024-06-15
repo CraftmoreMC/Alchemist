@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
@@ -169,6 +170,6 @@ public class Recipe extends FabricRecipeProvider {
                 .requires(philosophers_stone.getItem())
                 .requires(input, inputcount)
                 .unlockedBy(RecipeProvider.getHasName(philosophers_stone.getItem()), RecipeProvider.has(philosophers_stone.getItem()))
-                .save(recipeoutput, ResourceLocation.fromNamespaceAndPath(Alchemist.MODID, output +"_to_"+input));
+                .save(recipeoutput, ResourceLocation.fromNamespaceAndPath(Alchemist.MODID, ResourceLocation.tryParse(output.toString()).getPath()+"_to_"+ResourceLocation.tryParse(input.toString()).getPath()));
     }
 }
