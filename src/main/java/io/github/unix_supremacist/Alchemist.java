@@ -23,10 +23,6 @@ import org.slf4j.LoggerFactory;
 public class Alchemist implements ModInitializer {
 	public static final String MODID = "alchemist";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
-	public static final CreativeModeTab tab = PolymerItemGroupUtils.builder()
-			.icon(() -> new ItemStack(AlchemistItems.philosophers_stone.getItem()))
-			.title(Component.translatable("itemGroup."+MODID))
-			.build();
 	public static final DataComponentType<Integer> POWER = DataComponentType.<Integer>builder().persistent(ExtraCodecs.NON_NEGATIVE_INT).networkSynchronized(ByteBufCodecs.VAR_INT).build();
 
 
@@ -34,9 +30,18 @@ public class Alchemist implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Welcome to the World of Alchemy!");
 		Registry.register(BuiltInRegistries.DATA_COMPONENT_TYPE, ResourceLocation.fromNamespaceAndPath(MODID, "empowered"), Alchemist.POWER);
-		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(MODID, "tab"), Alchemist.tab);
 		AlchemistBlocks.values(); //force the enum to load
 		AlchemistItems.values(); //force the enum to load
+		PolymerItemGroupUtils.registerPolymerItemGroup(
+				ResourceLocation.fromNamespaceAndPath(MODID, "tab"),
+				CreativeModeTab.builder(CreativeModeTab.Row.BOTTOM, -1)
+						.icon(() -> new ItemStack(AlchemistItems.philosophers_stone.getItem()))
+						.title(Component.translatable("itemGroup."+MODID))
+						.displayItems(((c, e) -> {
+							for (AlchemistItems item : AlchemistItems.values())
+								e.accept(item.getItem());
+						}))
+						.build());
 		CommonLifecycleEvents.TAGS_LOADED.register((registries, client) -> BlockTag.init());
 		PolymerResourcePackUtils.addModAssets(MODID);
 		PolymerItemUtils.markAsPolymer(POWER);
