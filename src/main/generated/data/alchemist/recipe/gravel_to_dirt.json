@@ -1,34 +1,15 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
-    {
-      "item": "alchemist:philosophers_stone"
-    },
-    {
-      "item": "minecraft:dirt"
-    },
-    {
-      "item": "minecraft:dirt"
-    },
-    {
-      "item": "minecraft:dirt"
-    },
-    {
-      "item": "minecraft:dirt"
-    },
-    {
-      "item": "minecraft:dirt"
-    },
-    {
-      "item": "minecraft:dirt"
-    },
-    {
-      "item": "minecraft:dirt"
-    },
-    {
-      "item": "minecraft:dirt"
-    }
+    "alchemist:philosophers_stone",
+    "minecraft:dirt",
+    "minecraft:dirt",
+    "minecraft:dirt",
+    "minecraft:dirt",
+    "minecraft:dirt",
+    "minecraft:dirt",
+    "minecraft:dirt",
+    "minecraft:dirt"
   ],
   "result": {
     "count": 8,

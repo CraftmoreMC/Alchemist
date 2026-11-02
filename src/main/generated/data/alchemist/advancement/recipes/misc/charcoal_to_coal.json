@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:charcoal_to_coal"
+        "recipes": "alchemist:charcoal_to_coal"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

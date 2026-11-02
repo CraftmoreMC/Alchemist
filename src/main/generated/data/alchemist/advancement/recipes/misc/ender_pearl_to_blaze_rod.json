@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:ender_pearl_to_blaze_rod"
+        "recipes": "alchemist:ender_pearl_to_blaze_rod"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

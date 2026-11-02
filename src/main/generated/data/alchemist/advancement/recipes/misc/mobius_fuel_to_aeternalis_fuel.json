@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:mobius_fuel_to_aeternalis_fuel"
+        "recipes": "alchemist:mobius_fuel_to_aeternalis_fuel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

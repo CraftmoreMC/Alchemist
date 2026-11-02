@@ -1,34 +1,15 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
-    {
-      "item": "alchemist:philosophers_stone"
-    },
-    {
-      "item": "minecraft:cobblestone"
-    },
-    {
-      "item": "minecraft:cobblestone"
-    },
-    {
-      "item": "minecraft:cobblestone"
-    },
-    {
-      "item": "minecraft:cobblestone"
-    },
-    {
-      "item": "minecraft:cobblestone"
-    },
-    {
-      "item": "minecraft:cobblestone"
-    },
-    {
-      "item": "minecraft:cobblestone"
-    },
-    {
-      "item": "minecraft:cobblestone"
-    }
+    "alchemist:philosophers_stone",
+    "minecraft:cobblestone",
+    "minecraft:cobblestone",
+    "minecraft:cobblestone",
+    "minecraft:cobblestone",
+    "minecraft:cobblestone",
+    "minecraft:cobblestone",
+    "minecraft:cobblestone",
+    "minecraft:cobblestone"
   ],
   "result": {
     "count": 8,

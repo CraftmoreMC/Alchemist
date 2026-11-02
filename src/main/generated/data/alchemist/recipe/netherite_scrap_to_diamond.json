@@ -1,25 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
-    {
-      "item": "alchemist:philosophers_stone"
-    },
-    {
-      "item": "minecraft:diamond"
-    },
-    {
-      "item": "minecraft:diamond"
-    },
-    {
-      "item": "minecraft:diamond"
-    },
-    {
-      "item": "minecraft:diamond"
-    }
+    "alchemist:philosophers_stone",
+    "minecraft:diamond",
+    "minecraft:diamond",
+    "minecraft:diamond",
+    "minecraft:diamond"
   ],
   "result": {
-    "count": 1,
     "id": "minecraft:netherite_scrap"
   }
 }

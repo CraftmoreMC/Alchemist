@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:cobblestone_to_gravel"
+        "recipes": "alchemist:cobblestone_to_gravel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

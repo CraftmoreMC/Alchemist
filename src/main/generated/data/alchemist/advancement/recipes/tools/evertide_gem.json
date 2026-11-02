@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:evertide_gem"
+        "recipes": "alchemist:evertide_gem"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

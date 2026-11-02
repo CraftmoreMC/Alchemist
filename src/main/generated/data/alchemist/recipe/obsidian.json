@@ -1,22 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "type": "alchemist:lava_shaped",
+  "consumes_lava": true,
   "key": {
-    "L": {
-      "tag": "c:buckets/lava"
-    },
-    "P": {
-      "item": "alchemist:philosophers_stone"
-    },
-    "W": {
-      "tag": "c:buckets/water"
-    }
+    "L": "#c:buckets/lava",
+    "P": "alchemist:philosophers_stone",
+    "W": "#c:buckets/water"
   },
   "pattern": [
     "PWL"
   ],
   "result": {
-    "count": 1,
     "id": "minecraft:obsidian"
   }
 }

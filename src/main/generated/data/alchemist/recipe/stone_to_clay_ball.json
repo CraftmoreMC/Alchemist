@@ -1,13 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
-    {
-      "item": "alchemist:philosophers_stone"
-    },
-    {
-      "item": "minecraft:clay_ball"
-    }
+    "alchemist:philosophers_stone",
+    "minecraft:clay_ball"
   ],
   "result": {
     "count": 4,

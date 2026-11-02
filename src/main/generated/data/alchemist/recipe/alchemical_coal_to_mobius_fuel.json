@@ -1,13 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
-    {
-      "item": "alchemist:philosophers_stone"
-    },
-    {
-      "item": "alchemist:mobius_fuel"
-    }
+    "alchemist:philosophers_stone",
+    "alchemist:mobius_fuel"
   ],
   "result": {
     "count": 8,

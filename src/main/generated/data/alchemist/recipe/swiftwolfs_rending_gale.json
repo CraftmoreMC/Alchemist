@@ -2,19 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "B": {
-      "item": "alchemist:iron_band"
-    },
-    "D": {
-      "item": "alchemist:dark_matter"
-    }
+    "B": "alchemist:iron_band",
+    "L": "alchemist:light_matter"
   },
   "pattern": [
-    "D",
+    "L",
     "B"
   ],
   "result": {
-    "count": 1,
     "id": "alchemist:swiftwolfs_rending_gale"
   }
 }

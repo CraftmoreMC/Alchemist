@@ -1,19 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
-    {
-      "item": "alchemist:philosophers_stone"
-    },
-    {
-      "item": "minecraft:blaze_rod"
-    },
-    {
-      "item": "minecraft:blaze_rod"
-    }
+    "alchemist:philosophers_stone",
+    "minecraft:blaze_rod",
+    "minecraft:blaze_rod"
   ],
   "result": {
-    "count": 1,
     "id": "minecraft:ender_pearl"
   }
 }

@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:iron_band"
+        "recipes": "alchemist:iron_band"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

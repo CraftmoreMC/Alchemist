@@ -8,6 +8,10 @@
     "minecraft:dark_oak_leaves",
     "minecraft:mangrove_leaves",
     "minecraft:spruce_leaves",
+    "minecraft:pale_oak_leaves",
+    "minecraft:orange_poplar_leaves",
+    "minecraft:red_poplar_leaves",
+    "minecraft:yellow_poplar_leaves",
     "minecraft:nether_wart_block",
     "minecraft:warped_wart_block"
   ]

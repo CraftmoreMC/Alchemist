@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:raw_iron_to_raw_gold"
+        "recipes": "alchemist:raw_iron_to_raw_gold"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

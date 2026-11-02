@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:cobblestone_to_sand"
+        "recipes": "alchemist:cobblestone_to_sand"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -1,37 +1,17 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
-    {
-      "item": "alchemist:philosophers_stone"
-    },
-    {
-      "item": "alchemist:alchemical_coal"
-    },
-    {
-      "item": "alchemist:alchemical_coal"
-    },
-    {
-      "item": "alchemist:alchemical_coal"
-    },
-    {
-      "item": "alchemist:alchemical_coal"
-    },
-    {
-      "item": "alchemist:alchemical_coal"
-    },
-    {
-      "item": "alchemist:alchemical_coal"
-    },
-    {
-      "item": "alchemist:alchemical_coal"
-    },
-    {
-      "item": "alchemist:alchemical_coal"
-    }
+    "alchemist:philosophers_stone",
+    "alchemist:alchemical_coal",
+    "alchemist:alchemical_coal",
+    "alchemist:alchemical_coal",
+    "alchemist:alchemical_coal",
+    "alchemist:alchemical_coal",
+    "alchemist:alchemical_coal",
+    "alchemist:alchemical_coal",
+    "alchemist:alchemical_coal"
   ],
   "result": {
-    "count": 1,
     "id": "alchemist:mobius_fuel"
   }
 }

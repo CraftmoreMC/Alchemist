@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:mobius_fuel_to_alchemical_coal"
+        "recipes": "alchemist:mobius_fuel_to_alchemical_coal"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

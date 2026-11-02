@@ -1,6 +1,6 @@
 package io.github.unix_supremacist.item;
 
-import eu.pb4.factorytools.api.item.ModeledItem;
+import eu.pb4.polymer.core.api.item.SimplePolymerItem;
 import io.github.unix_supremacist.Alchemist;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -8,11 +8,15 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 
-public class AbstractEmpowerableItem extends ModeledItem {
+/**
+ * An item with power levels, cycled by sneak-using it on a block. The level is shown
+ * on the durability bar (the item's damage value mirrors its power).
+ */
+public abstract class AbstractEmpowerableItem extends SimplePolymerItem {
     protected final int maxPower;
 
     public AbstractEmpowerableItem(Properties properties, int maxPower, Item polymerItem) {
-        super(polymerItem, properties);
+        super(properties, polymerItem, true);
         this.maxPower = maxPower;
     }
 
@@ -26,15 +30,12 @@ public class AbstractEmpowerableItem extends ModeledItem {
 
     @Override
     public InteractionResult useOn(UseOnContext context) {
-        InteractionResult result;
-        if(context.getPlayer().isShiftKeyDown()){
-            empower(context.getItemInHand(), context.getPlayer());
-            result = InteractionResult.SUCCESS;
-        } else {
-            result = InteractionResult.PASS;
+        Player player = context.getPlayer();
+        if (player != null && player.isShiftKeyDown()) {
+            empower(context.getItemInHand(), player);
+            return InteractionResult.SUCCESS;
         }
-
-        return result;
+        return InteractionResult.PASS;
     }
 
     public void empower(ItemStack item, Player p) {
@@ -44,9 +45,4 @@ public class AbstractEmpowerableItem extends ModeledItem {
             setPower(item, maxPower - 1);
         item.setDamageValue(getPower(item));
     }
-
-    //@Override
-    //public Rarity getRarity(ItemStack s){
-    //    return Rarity.EPIC;
-    //}
 }

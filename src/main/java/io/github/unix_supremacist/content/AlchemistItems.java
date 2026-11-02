@@ -1,30 +1,34 @@
 package io.github.unix_supremacist.content;
 
-import eu.pb4.factorytools.api.item.ModeledItem;
+import eu.pb4.polymer.core.api.item.SimplePolymerItem;
 import io.github.unix_supremacist.Alchemist;
 import io.github.unix_supremacist.item.AlchemistBlockItem;
+import io.github.unix_supremacist.item.BuildersStoneItem;
 import io.github.unix_supremacist.item.DestructionItem;
 import io.github.unix_supremacist.item.GaleItem;
 import io.github.unix_supremacist.item.PhilosophersStoneItem;
 import lombok.Getter;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LiquidBlock;
+
+import java.util.function.Function;
 
 public enum AlchemistItems {
     alchemical_coal(25600, Items.DIAMOND),
     aeternalis_fuel(1638400, Items.NETHERITE_SCRAP),
     //archangels_smite,
     //black_hole_band,
-    catalytic_lens(new DestructionItem(new Properties().stacksTo(1).durability(30), 3, 10, 5, Items.GOLD_NUGGET)),
-    chalk(new AlchemistBlockItem(AlchemistBlocks.transmutation_circle.getBlock(), new Properties().durability(64), Items.STICK)),
+    builders_stone(p -> new BuildersStoneItem(p.stacksTo(1).durability(16), 4, 4)),
+    catalytic_lens(p -> new DestructionItem(p.stacksTo(1).durability(30), 3, 10, 5, Items.GOLD_NUGGET)),
+    chalk(p -> new AlchemistBlockItem(AlchemistBlocks.transmutation_circle.getBlock(), p.durability(64), Items.STICK)),
     coal_coke(3200, Items.COOKED_BEEF),
     dark_matter(0, Items.FIRE_CHARGE),
     //dark_matter_pickaxe,
@@ -34,35 +38,41 @@ public enum AlchemistItems {
     //dark_matter_axe,
     //dark_matter_shears,
     //dark_matter_hammer,
-    destruction_catalyst(new DestructionItem(new Properties().stacksTo(1).durability(15), 3, 5, 1, Items.GOLD_INGOT)),
-    evertide_gem(new AlchemistBlockItem(Blocks.WATER, new Properties().stacksTo(1), Items.LAPIS_LAZULI)),
+    destruction_catalyst(p -> new DestructionItem(p.stacksTo(1).durability(15), 3, 5, 1, Items.GOLD_INGOT)),
+    evertide_gem(p -> new AlchemistBlockItem(Blocks.WATER, p.stacksTo(1), Items.LAPIS_LAZULI)),
     //gem_of_eternal_density,
     //harvest_goddess_band,
     //hyperkinetic_lens,
     iron_band(0, Items.IRON_BARS),
+    light_matter(0, Items.ENDER_EYE),
     mobius_fuel(204800, Items.EMERALD),
-    philosophers_stone(new PhilosophersStoneItem(new Properties().stacksTo(1).durability(3))),
+    philosophers_stone(p -> new PhilosophersStoneItem(p.stacksTo(1).durability(3))),
     red_matter(0, Items.MAGMA_CREAM),
-    swiftwolfs_rending_gale(new GaleItem(new Properties().stacksTo(1))),
-    volcanite_gem(new AlchemistBlockItem(Blocks.LAVA, new Properties().durability(64), Items.BLAZE_POWDER)),
+    swiftwolfs_rending_gale(p -> new GaleItem(p.stacksTo(1))),
+    volcanite_gem(p -> new AlchemistBlockItem(Blocks.LAVA, p.durability(64), Items.BLAZE_POWDER)),
     ;
-    @Getter Item item;
+    @Getter
+    private final Item item;
 
     AlchemistItems(int burntime, Item polymerItem){
-        this(new Properties(), burntime, polymerItem);
+        // true = use our own item model instead of the vanilla stand-in's
+        this(burntime, p -> new SimplePolymerItem(p, polymerItem, true));
     }
 
-    AlchemistItems(Properties properties, int burntime, Item polymerItem){
-        this(new ModeledItem(polymerItem, properties), burntime);
+    AlchemistItems(Function<Properties, Item> factory){
+        this(0, factory);
     }
 
-    AlchemistItems(Item item){
-        this(item, 0);
-    }
-
-    AlchemistItems(Item item, int burntime){
-        this.item = item;
-        FuelRegistry.INSTANCE.add(item, burntime);
-        Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(Alchemist.MODID, this.name()), item);
+    AlchemistItems(int burntime, Function<Properties, Item> factory){
+        ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, Alchemist.id(this.name()));
+        Properties properties = new Properties().setId(key);
+        // burn times live in data/alchemist/context_int_provider/cooking/time_<item>.json
+        if (burntime > 0)
+            properties.cookingFuel(ResourceKey.create(Registries.CONTEXT_INT_PROVIDER, Alchemist.id("cooking/time_" + this.name())));
+        this.item = Registry.register(BuiltInRegistries.ITEM, key, factory.apply(properties));
+        // lets pick-block find the chalk for a transmutation circle; skipped for the fluid gems
+        // so vanilla water and lava keep their own items
+        if (item instanceof BlockItem blockItem && !(blockItem.getBlock() instanceof LiquidBlock))
+            blockItem.registerBlocks(Item.BY_BLOCK, item);
     }
 }

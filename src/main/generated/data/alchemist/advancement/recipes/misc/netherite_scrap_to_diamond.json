@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:netherite_scrap_to_diamond"
+        "recipes": "alchemist:netherite_scrap_to_diamond"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

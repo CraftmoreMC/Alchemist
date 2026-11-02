@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:raw_copper_to_clay"
+        "recipes": "alchemist:raw_copper_to_clay"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

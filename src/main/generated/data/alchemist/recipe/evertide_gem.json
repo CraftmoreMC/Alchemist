@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "D": {
-      "item": "alchemist:dark_matter"
-    },
-    "W": {
-      "tag": "c:buckets/water"
-    }
+    "D": "alchemist:dark_matter",
+    "W": "#c:buckets/water"
   },
   "pattern": [
     "WWW",
@@ -15,7 +11,6 @@
     "WWW"
   ],
   "result": {
-    "count": 1,
     "id": "alchemist:evertide_gem"
   }
 }

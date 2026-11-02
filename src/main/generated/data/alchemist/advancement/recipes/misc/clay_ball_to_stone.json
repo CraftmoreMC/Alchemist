@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:clay_ball_to_stone"
+        "recipes": "alchemist:clay_ball_to_stone"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

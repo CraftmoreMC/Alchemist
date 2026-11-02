@@ -2,19 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "C": {
-      "item": "minecraft:clay_ball"
-    },
-    "D": {
-      "item": "minecraft:diorite"
-    }
+    "C": "minecraft:clay_ball",
+    "D": "minecraft:diorite"
   },
   "pattern": [
     "CD",
     "D "
   ],
   "result": {
-    "count": 1,
     "id": "alchemist:chalk"
   }
 }

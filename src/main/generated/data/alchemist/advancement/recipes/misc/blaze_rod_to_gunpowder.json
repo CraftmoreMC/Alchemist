@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:blaze_rod_to_gunpowder"
+        "recipes": "alchemist:blaze_rod_to_gunpowder"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

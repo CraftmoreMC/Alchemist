@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "A": {
-      "item": "alchemist:aeternalis_fuel"
-    },
-    "F": {
-      "item": "minecraft:flint_and_steel"
-    },
-    "R": {
-      "item": "alchemist:red_matter"
-    },
-    "S": {
-      "item": "alchemist:philosophers_stone"
-    }
+    "A": "alchemist:aeternalis_fuel",
+    "F": "minecraft:flint_and_steel",
+    "R": "alchemist:red_matter",
+    "S": "alchemist:philosophers_stone"
   },
   "pattern": [
     "FRF",
@@ -21,7 +13,6 @@
     "FRF"
   ],
   "result": {
-    "count": 1,
     "id": "alchemist:destruction_catalyst"
   }
 }

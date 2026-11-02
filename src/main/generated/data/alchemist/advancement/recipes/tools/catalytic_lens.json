@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:catalytic_lens"
+        "recipes": "alchemist:catalytic_lens"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

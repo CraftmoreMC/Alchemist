@@ -1,25 +1,13 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
-    {
-      "item": "alchemist:philosophers_stone"
-    },
-    {
-      "item": "minecraft:clay"
-    },
-    {
-      "item": "minecraft:clay"
-    },
-    {
-      "item": "minecraft:clay"
-    },
-    {
-      "item": "minecraft:clay"
-    }
+    "alchemist:philosophers_stone",
+    "minecraft:clay",
+    "minecraft:clay",
+    "minecraft:clay",
+    "minecraft:clay"
   ],
   "result": {
-    "count": 1,
     "id": "minecraft:raw_copper"
   }
 }

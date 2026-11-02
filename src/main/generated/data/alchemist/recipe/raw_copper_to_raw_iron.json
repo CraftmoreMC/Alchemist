@@ -1,13 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
-    {
-      "item": "alchemist:philosophers_stone"
-    },
-    {
-      "item": "minecraft:raw_iron"
-    }
+    "alchemist:philosophers_stone",
+    "minecraft:raw_iron"
   ],
   "result": {
     "count": 8,

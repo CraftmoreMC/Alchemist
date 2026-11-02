@@ -43,7 +43,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:destruction_catalyst"
+        "recipes": "alchemist:destruction_catalyst"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

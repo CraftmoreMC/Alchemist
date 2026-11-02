@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:dirt_to_sand"
+        "recipes": "alchemist:dirt_to_sand"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

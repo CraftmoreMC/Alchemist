@@ -1,13 +1,9 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "alchemist:lava_shaped",
   "category": "equipment",
   "key": {
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "L": {
-      "tag": "c:buckets/lava"
-    }
+    "I": "minecraft:iron_ingot",
+    "L": "#c:buckets/lava"
   },
   "pattern": [
     "III",
@@ -15,7 +11,6 @@
     "III"
   ],
   "result": {
-    "count": 1,
     "id": "alchemist:iron_band"
   }
 }

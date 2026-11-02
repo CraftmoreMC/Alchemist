@@ -1,13 +1,9 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "alchemist:lava_shaped",
   "category": "equipment",
   "key": {
-    "D": {
-      "item": "alchemist:dark_matter"
-    },
-    "L": {
-      "tag": "c:buckets/lava"
-    }
+    "D": "alchemist:dark_matter",
+    "L": "#c:buckets/lava"
   },
   "pattern": [
     "LLL",
@@ -15,7 +11,6 @@
     "LLL"
   ],
   "result": {
-    "count": 1,
     "id": "alchemist:volcanite_gem"
   }
 }

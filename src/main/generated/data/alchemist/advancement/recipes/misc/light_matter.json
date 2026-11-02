@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aeternalis_fuel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "alchemist:aeternalis_fuel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_red_matter": {
+      "conditions": {
+        "items": [
+          {
+            "items": "alchemist:red_matter"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "alchemist:light_matter"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_red_matter",
+      "has_aeternalis_fuel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "alchemist:light_matter"
+    ]
+  }
+}

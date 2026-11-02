@@ -1,21 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
-    "A": {
-      "item": "alchemist:aeternalis_fuel"
-    },
-    "D": {
-      "item": "alchemist:dark_matter"
-    }
+    "D": "alchemist:dark_matter",
+    "M": "alchemist:mobius_fuel"
   },
   "pattern": [
-    "AAA",
+    "MMM",
     "DDD",
-    "AAA"
+    "MMM"
   ],
   "result": {
-    "count": 1,
     "id": "alchemist:red_matter"
   }
 }

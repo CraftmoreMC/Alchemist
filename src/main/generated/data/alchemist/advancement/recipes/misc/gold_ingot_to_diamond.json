@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:gold_ingot_to_diamond"
+        "recipes": "alchemist:gold_ingot_to_diamond"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

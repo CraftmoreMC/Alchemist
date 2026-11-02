@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_mobius_fuel": {
+    "has_alchemical_coal": {
       "conditions": {
         "items": [
           {
-            "items": "alchemist:mobius_fuel"
+            "items": "alchemist:alchemical_coal"
           }
         ]
       },
@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:dark_matter"
+        "recipes": "alchemist:dark_matter"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -31,7 +31,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_mobius_fuel",
+      "has_alchemical_coal",
       "has_netherite_block"
     ]
   ],

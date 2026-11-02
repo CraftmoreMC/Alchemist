@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:volcanite_gem"
+        "recipes": "alchemist:volcanite_gem"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

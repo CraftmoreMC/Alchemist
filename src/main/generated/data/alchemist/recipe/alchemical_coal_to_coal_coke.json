@@ -1,37 +1,17 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
-    {
-      "item": "alchemist:philosophers_stone"
-    },
-    {
-      "item": "alchemist:coal_coke"
-    },
-    {
-      "item": "alchemist:coal_coke"
-    },
-    {
-      "item": "alchemist:coal_coke"
-    },
-    {
-      "item": "alchemist:coal_coke"
-    },
-    {
-      "item": "alchemist:coal_coke"
-    },
-    {
-      "item": "alchemist:coal_coke"
-    },
-    {
-      "item": "alchemist:coal_coke"
-    },
-    {
-      "item": "alchemist:coal_coke"
-    }
+    "alchemist:philosophers_stone",
+    "alchemist:coal_coke",
+    "alchemist:coal_coke",
+    "alchemist:coal_coke",
+    "alchemist:coal_coke",
+    "alchemist:coal_coke",
+    "alchemist:coal_coke",
+    "alchemist:coal_coke",
+    "alchemist:coal_coke"
   ],
   "result": {
-    "count": 1,
     "id": "alchemist:alchemical_coal"
   }
 }

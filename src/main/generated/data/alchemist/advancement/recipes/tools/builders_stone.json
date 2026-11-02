@@ -1,11 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_philosophers_stone": {
+    "has_brick": {
       "conditions": {
         "items": [
           {
-            "items": "alchemist:philosophers_stone"
+            "items": "minecraft:brick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_dark_matter": {
+      "conditions": {
+        "items": [
+          {
+            "items": "alchemist:dark_matter"
           }
         ]
       },
@@ -13,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:dark_matter_to_netherite_block"
+        "recipes": "alchemist:builders_stone"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_philosophers_stone"
+      "has_dark_matter",
+      "has_brick"
     ]
   ],
   "rewards": {
     "recipes": [
-      "alchemist:dark_matter_to_netherite_block"
+      "alchemist:builders_stone"
     ]
   }
 }

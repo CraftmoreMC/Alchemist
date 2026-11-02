@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:iron_ingot_to_copper_ingot"
+        "recipes": "alchemist:iron_ingot_to_copper_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

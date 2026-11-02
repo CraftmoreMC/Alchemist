@@ -1,37 +1,17 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
-    {
-      "item": "alchemist:philosophers_stone"
-    },
-    {
-      "item": "minecraft:raw_iron"
-    },
-    {
-      "item": "minecraft:raw_iron"
-    },
-    {
-      "item": "minecraft:raw_iron"
-    },
-    {
-      "item": "minecraft:raw_iron"
-    },
-    {
-      "item": "minecraft:raw_iron"
-    },
-    {
-      "item": "minecraft:raw_iron"
-    },
-    {
-      "item": "minecraft:raw_iron"
-    },
-    {
-      "item": "minecraft:raw_iron"
-    }
+    "alchemist:philosophers_stone",
+    "minecraft:raw_iron",
+    "minecraft:raw_iron",
+    "minecraft:raw_iron",
+    "minecraft:raw_iron",
+    "minecraft:raw_iron",
+    "minecraft:raw_iron",
+    "minecraft:raw_iron",
+    "minecraft:raw_iron"
   ],
   "result": {
-    "count": 1,
     "id": "minecraft:raw_gold"
   }
 }

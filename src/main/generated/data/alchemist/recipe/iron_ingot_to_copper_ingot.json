@@ -1,37 +1,17 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
-    {
-      "item": "alchemist:philosophers_stone"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    }
+    "alchemist:philosophers_stone",
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot"
   ],
   "result": {
-    "count": 1,
     "id": "minecraft:iron_ingot"
   }
 }

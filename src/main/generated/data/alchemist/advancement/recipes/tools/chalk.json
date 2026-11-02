@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "alchemist:chalk"
+        "recipes": "alchemist:chalk"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

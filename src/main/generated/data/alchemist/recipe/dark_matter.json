@@ -1,21 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
-    "M": {
-      "item": "alchemist:mobius_fuel"
-    },
-    "N": {
-      "item": "minecraft:netherite_block"
-    }
+    "A": "alchemist:alchemical_coal",
+    "N": "minecraft:netherite_block"
   },
   "pattern": [
-    "MMM",
-    "MNM",
-    "MMM"
+    "AAA",
+    "ANA",
+    "AAA"
   ],
   "result": {
-    "count": 1,
     "id": "alchemist:dark_matter"
   }
 }

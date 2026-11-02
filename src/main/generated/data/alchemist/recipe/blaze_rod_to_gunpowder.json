@@ -1,19 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
-    {
-      "item": "alchemist:philosophers_stone"
-    },
-    {
-      "item": "minecraft:gunpowder"
-    },
-    {
-      "item": "minecraft:gunpowder"
-    }
+    "alchemist:philosophers_stone",
+    "minecraft:gunpowder",
+    "minecraft:gunpowder"
   ],
   "result": {
-    "count": 1,
     "id": "minecraft:blaze_rod"
   }
 }
